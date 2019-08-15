@@ -6,6 +6,10 @@ Have a trail of squares follow cursor around on canvas
 
 To utilize an array in the scheme of animation.
 
+## To use
+
+type in a number in the text box and click submit. Place mouse on the canvas
+
 ## Implementation
 
 - The tail is an array of square objects.
@@ -21,6 +25,7 @@ To utilize an array in the scheme of animation.
 - setUp(): intial function to call. It sets up all the variables to upon starting
 - draw(): function that will be called continuously. This function draws on the canvas
 - getPosition(event): function that gets the position of the cursor. Is called when the cursor moves over the canvas.
+- renderCanvas(event): renders the array of squares given the length inputted.
 
 ## square.js
 
@@ -35,8 +40,14 @@ To utilize an array in the scheme of animation.
 - y location
 - color
 - draw(context)
-- update(x,y)
+- update(x,y) for the head square
+- updatePart(previous) for the rest
 
 ## Rules
 
 - The first square in the array must always be in the position of the cursor if the cursor is on the canvas.
+
+- remaining squares should follow in the first square's footsteps
+- try delaying update? Use setInterval?
+- Implement a speed
+- Speed needs to change depending on distance from previous part.
