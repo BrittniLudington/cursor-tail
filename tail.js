@@ -28,10 +28,14 @@ function renderCanvas(e)
         {
             return;
         }
+    let opacity = document.getElementById("opacity").checked;
     tail = [];
+    let alpha = 1;
     for(let i = 0; i < num; i++) // create four squares
     {
-        tail.push(createSquare());
+        tail.push(createSquare(alpha));
+        if(opacity == true)
+            alpha = alpha / 2;
     }
     context.clearRect(0,0,width,height);
 

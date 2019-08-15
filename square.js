@@ -1,4 +1,4 @@
-export default function createSquare()
+export default function createSquare(alpha)
 {
     let square = {};
     square.x = -1;
@@ -6,12 +6,15 @@ export default function createSquare()
     square.size = 50;
     square.color = "#ffffff";
     square.speed = 10;
+    square.alpha = alpha;
     square.draw = function(context)
     {
         if(square.x < 0 && square.y < 0)
             return;
+        context.globalAlpha = square.alpha;
         context.fillStyle = square.color;
         context.fillRect(square.x,square.y,square.size,square.size);
+        context.globalAlpha = 1;
     }
 
     square.update = function(x,y)

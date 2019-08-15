@@ -39,6 +39,7 @@ type in a number in the text box and click submit. Place mouse on the canvas
 - x location
 - y location
 - color
+- opacity
 - draw(context)
 - update(x,y) for the head square
 - updatePart(previous) for the rest
